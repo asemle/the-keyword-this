@@ -72,8 +72,9 @@ var getYear = function(){
 //Above you're given the getYear function. Using your prius and mustang objects from above, use the proper syntax that will allow for you to call the getYear function with the prius then the mustang objects being the focal objects. *Don't add getYear as a property on both objects*.
 
 //Note(no tests)
-  //Code Here
 
+  var priusYear = getYear.bind(prius);
+  var mustangYear = getYear.bind(mustang);
 
 //New Problem
 
@@ -87,14 +88,14 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = getMyUsername(); //Fix this
+var userName = getMyUsername.call(myUser); //Fix this
 
 //Above you're given an object, a function, and a setTimeout invocation. After 5 seconds, what will the getUsername function return?
 //Note(no tests)
-  //Answer Here
+
 
 //In the example above, what is the 'this keyword' bound to when getUsername runs?
 
-  //Answer Here
+  //the window, until i fix it with call
 
 //Fix the getMyUsername invocation so that userName will be equal to 'iliketurtles'.
